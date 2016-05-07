@@ -1,0 +1,128 @@
+#projectIndexAddTable, #projectForeignKeyAddTable {
+	thead tr {
+		vertical-align: top;
+		height: 40px;
+		
+		.left {
+			text-align: left;
+		}
+		
+		.right {
+			text-align: right;
+		}
+	}
+	
+	tbody td {
+		width: 25%;
+		vertical-align: top;
+		background-color: @wcfContainerAccentBackgroundColor;
+		
+		li {
+			&:hover {
+				background-color: @wcfContainerHoverBackgroundColor;
+			}
+			
+			&.matching {
+				background-color: @wcfSuccessBackgroundColor;
+				color: @wcfSuccessColor;
+			}
+			
+			&.notMatching {
+				background-color: @wcfErrorBackgroundColor;
+				color: @wcfErrorColor;
+			}
+			
+			padding: 2px 5px;
+			margin-bottom: 5px;
+			cursor: pointer;
+		}
+		
+		&#selectedColumns, &#selectedReferencedColumns {
+			ul {
+				min-height: 50px;
+				padding: 0 10px 100px;
+			}
+			
+			&.right {
+				border-width: 0 1px 0 0;
+			}
+			
+			&.left {
+				border-width: 0 0 0 1px;
+			}
+			
+			border-style: solid;
+			border-color: @wcfContainerBorderColor;
+		}
+	}
+	
+	width: 100%;
+}
+
+.checkboxedList li li {
+	margin-left: 20px;
+}
+
+.projectLegendButton {
+	padding: 0px 10px 2px 10px;
+}
+
+.projectTabularBox h2 > a {
+	float: right;
+	
+	&.button {
+		color: @wcfButtonColor;
+		padding-top: 3px;
+		padding-bottom: 3px;
+	}
+}
+
+.projectTabularBox h2 .projectTableFilterInput {
+	float: right;
+	margin-right: 10px;
+}
+
+.projectTabularBox .table > tbody .projectHighlightedRow > td, .projectTabularBox .projectHighlightedRow:hover > td {
+	background-color: @wcfUserPanelBackgroundColor;
+	
+	border-right: 1px solid rgba(0, 0, 0, .2);
+	color: @wcfTabularBoxColor;
+	font-size: @wcfSmallFontSize;
+	font-weight: bold;
+	white-space: nowrap;
+	word-wrap: normal;
+	padding-left: 9px;
+}
+
+.projectTabularBox .table > tbody .projectLanguageVariableRow-1 > td {
+	background-color: @wcfContainerBackgroundColor;
+}
+
+.projectTabularBox .table > tbody .projectLanguageVariableRow-2 > td {
+	background-color: @wcfContainerAccentBackgroundColor;
+}
+
+.projectTabularBox .table > tbody .projectLanguageVariableRow-1.hover > td,
+.projectTabularBox .table > tbody .projectLanguageVariableRow-2.hover > td {
+	background-color: @wcfContainerHoverBackgroundColor;
+}
+
+.projectTabularBox .table tr.deleted td {
+	background-color: #fee !important;
+	color: #c00 !important;
+}
+
+.projectTabularBox .table tr.deleted {
+	span.icon, .columnShowOrder span {
+		display: none;
+	}
+}
+
+.projectTabularBox .table tr.non-existent td {
+	background-color: @wcfWarningBackgroundColor;
+	color: @wcfWarningColor;
+}
+
+.projectTabularBox .table > tbody .projectHighlightedRow > td > span {
+	color: @wcfTabularBoxColor;
+}
